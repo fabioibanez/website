@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import localFont from 'next/font/local';
-import { hasEntries } from '../lib/content';
-import { SiteNav } from './site-nav';
 import './globals.css';
 
 const serif = localFont({
@@ -33,10 +31,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <a className="brand" href="/">
               Fabio Ibanez
             </a>
-            <SiteNav
-              showWriting={hasEntries('writings')}
-              showProjects={hasEntries('projects')}
-            />
           </header>
           <main>{children}</main>
           <footer className="site-footer">

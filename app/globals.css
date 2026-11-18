@@ -63,10 +63,6 @@ img {
 }
 
 .top {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
   margin-bottom: 2.75rem;
 }
 
@@ -76,23 +72,8 @@ img {
 }
 
 .brand:hover,
-.top-links a:hover,
 .site-footer a:hover {
   color: var(--accent);
-}
-
-.top-links {
-  display: flex;
-  gap: 1rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  font-size: 14px;
-  color: var(--muted);
-}
-
-.top-links a[aria-current='page'] {
-  color: var(--fg);
 }
 
 .kicker {
@@ -100,107 +81,6 @@ img {
   max-width: 32rem;
   font-size: 1.2rem;
   line-height: 1.65;
-}
-
-.entry-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.25;
-}
-
-.entry-meta {
-  margin: 0.4rem 0 0;
-  color: var(--faint);
-  font-size: 13px;
-}
-
-.entry-meta a,
-.entry-body a {
-  color: var(--accent);
-}
-
-.entry-body {
-  margin-top: 1.5rem;
-  font-size: 1.125rem;
-  line-height: 1.65;
-}
-
-.entry-body > :first-child {
-  margin-top: 0;
-}
-
-.entry-body p,
-.entry-body ul,
-.entry-body ol,
-.entry-body pre,
-.entry-body blockquote {
-  margin: 0 0 1.05em;
-}
-
-.entry-body a {
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-.entry-body h2,
-.entry-body h3 {
-  margin: 1.5em 0 0.45em;
-  font-size: 1.05rem;
-  font-weight: 500;
-  letter-spacing: -0.02em;
-}
-
-.entry-body pre,
-.entry-body code {
-  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
-  font-size: 0.88em;
-}
-
-.entry-body pre {
-  padding: 0.8rem 0.95rem;
-  overflow-x: auto;
-  background: #141615;
-  border: 1px solid var(--line);
-}
-
-.entry-body :not(pre) > code {
-  color: var(--accent);
-}
-
-.index {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.index a {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1.25rem;
-  padding: 0.65rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.index li:last-child a {
-  border-bottom: 1px solid var(--line);
-}
-
-.index a:hover .name {
-  color: var(--accent);
-}
-
-.index .name {
-  letter-spacing: -0.01em;
-}
-
-.index .desc {
-  color: var(--faint);
-  font-size: 14px;
-  text-align: right;
-  flex-shrink: 0;
 }
 
 .figure {
@@ -237,14 +117,5 @@ img {
 
   .kicker {
     font-size: 1.1rem;
-  }
-
-  .index a {
-    flex-direction: column;
-    gap: 0.15rem;
-  }
-
-  .index .desc {
-    text-align: left;
   }
 }
