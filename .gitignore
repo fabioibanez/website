@@ -6,3 +6,4 @@ out
 # wrangler local state and secrets — never commit
 .wrangler
 .dev.vars
+*.tsbuildinfo
