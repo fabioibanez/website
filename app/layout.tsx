@@ -1,16 +1,14 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import localFont from 'next/font/local';
+import { Newsreader } from 'next/font/google';
 import './globals.css';
 
-const serif = localFont({
-  src: [
-    { path: '../fonts/Newsreader[opsz,wght].ttf', style: 'normal' },
-    { path: '../fonts/Newsreader-Italic[opsz,wght].ttf', style: 'italic' },
-  ],
+const serif = Newsreader({
+  subsets: ['latin'],
+  style: ['normal', 'italic'],
+  axes: ['opsz'],
   variable: '--font-serif',
   display: 'swap',
-  weight: '200 800',
 });
 
 export const metadata: Metadata = {
@@ -37,7 +35,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             <span>Palo Alto</span>
             <a href="https://github.com/fabioibanez">GitHub</a>
             <a href="mailto:fabioi@stanford.edu">Email</a>
-            <span>made in 🇨🇺</span>
           </footer>
         </div>
       </body>

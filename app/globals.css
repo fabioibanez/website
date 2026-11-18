@@ -58,8 +58,16 @@ img {
 .shell {
   width: 100%;
   max-width: 34rem;
+  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
-  padding: 3.75rem 1.25rem 4.5rem;
+  padding: 3.75rem 1.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 .top {
