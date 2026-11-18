@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:gh": "next build && cp -R gh-pages-assets/. out/",
-    "start": "next start"
+    "build:gh": "next build && cp -R gh-pages-assets/. out/"
   },
   "dependencies": {
     "next": "^15.0.3",
