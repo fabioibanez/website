@@ -1,13 +1,20 @@
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import { Newsreader } from 'next/font/google';
+import { Inter, PT_Serif } from 'next/font/google';
 import './globals.css';
+import { getAllPosts } from '../lib/posts';
 
-const serif = Newsreader({
+const serif = PT_Serif({
   subsets: ['latin'],
+  weight: ['400', '700'],
   style: ['normal', 'italic'],
-  axes: ['opsz'],
   variable: '--font-serif',
+  display: 'swap',
+});
+
+const sans = Inter({
+  subsets: ['latin'],
+  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -21,14 +28,21 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+  // Drafts are excluded in production, so the link hides until a post is published.
+  const hasPosts = getAllPosts().length > 0;
   return (
-    <html lang="en" className={serif.variable}>
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body>
         <div className="shell">
           <header className="top">
             <a className="brand" href="/">
               Fabio Ibanez
             </a>
+            {hasPosts && (
+              <nav className="nav">
+                <a href="/blog">Writing</a>
+              </nav>
+            )}
           </header>
           <main>{children}</main>
           <footer className="site-footer">
